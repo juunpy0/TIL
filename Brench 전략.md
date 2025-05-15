@@ -40,16 +40,37 @@ Flow는 '흐름'이라는 직역을 가지고 있다. 협업 개발 과정이나
 ### Brench 종류
 Git-flow에는 대표적으로 5개의 브랜치를 사용한다.
 
-> - main(master) : 사용자가 직접 사용하는 최종 제품 코드가 있는 배포용(상용) 브랜치이다
+> - main(master) : 사용자가 직접 사용하는 최종 제품 코드가 있는 배포용(상용) 브랜치이다
 > - develop :다음 버전을 위한 개발 중인 코드가 모이는 브랜치 (메인 개발 흐름)이다
 > - feature : 새로운 기능을 개발하기 위한 개별 브랜치 (develop에서 분기)
 > - release : 	출시 전, 버그 수정 및 배포 준비를 위한 브랜치이다. (develop에서 분기, main으로 머진)
 > - hotfix : 배포된 버전(main)에서 발생한 긴급한 문제를 수정하는 브랜치 (main에서 분기)
 
 ***
-### MAIN (Matster)
+### Main (Matster)
+  Main 브랜치는 출시 가능한 코드들을 모와놓는 브랜치이다. 프로젝트가 시작하면 생성되는 브랜치이며 개발 버전과 프로세스에 걸쳐 계속 유지된다. 
 
+  Main 브랜치는 상용 브랜치이기 때문에 이슈가 발생하면 수습하기가 어렵고 직접 수습하기에도 위험하다.
 
+  ### Develop
+  Develop 브랜치는 Main에서 분기된다. 
+  Develop에서 개발이 완료되면 Main 브랜치로 머지(Marge)되며 Main 브랜치에 최종 버전으로 업로드 된다. 
+
+  ### feature & release & hotfix
+  보조 브랜치이며 유지되지 않고 일시적으로 사용된다. 주로  기능 개발, 릴리스 준비,유지보수를 위해 사용되며 목적이 끝나면 삭제된다.
+
+  ***
+  ## Git flow 흐름
+  > - develop 브랜치는 main에서 분기해서 만들어진다.
+  > - 새로운 기능 작업을 위해 develop에서 feature 브랜치를 분기한다.
+  > - 기능 개발이 끝나면 feature 브랜치는 다시 develop에 머지된다.
+  > - 기능 개발이 끝나면 feature 브랜치는 다시 develop에 머지된다. 
+  > - 버그를 고칠 때도 develop에서 bugfix 브랜치를 머지된다.
+  > - 버그 수정이 완료되면 bugfix 브랜치는 develop에 머지된다.
+  > - 버그 수정이 완료되면 bugfix 브랜치는 develop에 머지된다.
+  > - 릴리스가 마무리되면 relase 브랜치는 develop과 main에 머지된다.
+  >- 만약 master에서 문제가 발견되면 master에서 바로 hotfix 브랜치가 분기한다.
+  > - 긴습 수정이 완료되면 hotfix 브랜치는 develop과 main에 머지된다.
 
  
 
