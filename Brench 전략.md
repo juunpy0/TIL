@@ -33,8 +33,11 @@ Branch 전략은 여러 개발자가 동시에 작업할 수 있도록 협업을
 
 **Commit**은 Staging area(무대)에 올린 파일을 Push하기 위해 대기 상태 즉 하나의 버전으로 저장하는 작업이다.
 
+&nbsp;
+
 > git push origin main
-커밋된 버전을 원격 저장소 main 브랜치로 Push(발행)하는 작업이다. 
+
+커밋된 버전을 원격 저장소 main 브랜치로 **Push**(발행)하는 작업이다. 
 
 
 
