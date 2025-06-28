@@ -29,6 +29,8 @@
 
 ## 앱의 상태 변화와 흐름
 
+Not running -> Foregrund-Inatctive
+
 
 
 
